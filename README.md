@@ -1,6 +1,31 @@
 # MIE350_DentalCilinic_WebApplication
 MIE350 team
 
+## 快速启动（前后端连接）
+
+1. **启动后端**（在项目根目录）：
+   ```bash
+   cd backend
+   ./mvnw spring-boot:run
+   ```
+   后端默认运行在 `http://localhost:8080`。
+
+2. **启动前端**：
+   ```bash
+   cd frontend
+   npm install
+   npm run dev
+   ```
+   前端默认运行在 `http://localhost:5173`，会请求后端 `http://localhost:8080` 的 API。
+
+3. **测试登录**：浏览器打开 `http://localhost:5173`，使用测试账号登录：
+   - 用户名: `receptionist`，密码: `dental123`
+   - 或 `dentist` / `dental456`，`admin` / `dental789`
+
+前端通过 `frontend/.env.development` 中的 `VITE_API_URL` 配置后端地址，部署时修改该变量即可。
+
+---
+
 # Dental Clinic IMS - Backend API Documentation (Frontend Team Reference)
 
 Base URL: `http://localhost:8080` (replace with actual domain when deployed)
