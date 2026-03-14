@@ -1,7 +1,5 @@
 # MIE350_DentalCilinic_WebApplication
 MIE350 team
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 ## 1. Data Schema (Table Structure)
 
