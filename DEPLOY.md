@@ -83,7 +83,7 @@ The backend allows these origins for `/api/**`:
 
 - `https://jmoney.appsmith.com`
 - `https://app.appsmith.com`
-- Plus local dev origins (e.g. localhost:5173)
+- Plus local dev origins (e.g. localhost:3000, localhost:5500)
 
 To allow another frontend domain, add it to `allowedOrigins` in `backend/src/main/java/com/dentalclinic/WebConfig.java` and redeploy.
 

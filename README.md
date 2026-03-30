@@ -361,20 +361,4 @@ erDiagram
 |------|------|------|
 | GET | /api/dashboard/stats | Returns `{monthlyRevenue, todayAppointments, monthlyTrend, lowStockCount, pendingBills, totalPatients}` |
 
----
 
-## 7. Date/Time Formats
-
-- **LocalDate**: `yyyy-MM-dd` (e.g. 2026-03-12)
-- **LocalTime**: `HH:mm:ss` (e.g. 09:00:00)
-- **LocalDateTime**: `yyyy-MM-ddTHH:mm:ss` (e.g. 2026-03-12T10:30:00)
-
----
-
-## 8. Error Responses
-
-Most endpoints return `{"error": "error message"}` on exception, with HTTP status 404 or 409 (appointment conflict).
-=======
->>>>>>> parent of c259085 (README update)
-=======
->>>>>>> parent of c259085 (README update)
