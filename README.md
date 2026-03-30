@@ -1,7 +1,5 @@
 # MIE350_DentalCilinic_WebApplication
 MIE350 team
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 ## 1. Data Schema (Table Structure)
 
@@ -374,7 +372,3 @@ erDiagram
 ## 8. Error Responses
 
 Most endpoints return `{"error": "error message"}` on exception, with HTTP status 404 or 409 (appointment conflict).
-=======
->>>>>>> parent of c259085 (README update)
-=======
->>>>>>> parent of c259085 (README update)
