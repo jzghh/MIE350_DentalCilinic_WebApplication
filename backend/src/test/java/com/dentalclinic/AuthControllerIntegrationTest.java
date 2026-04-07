@@ -25,4 +25,28 @@ class AuthControllerIntegrationTest extends AbstractIntegrationTest {
                 .andExpect(jsonPath("$.role", is("receptionist")))
                 .andExpect(jsonPath("$.userId").isNumber());
     }
+
+    @Test
+    void loginFailsWithWrongPassword() throws Exception {
+        mockMvc.perform(post("/api/auth/login")
+                        .contentType(MediaType.APPLICATION_JSON)
+                        .content(json(Map.of(
+                                "username", "receptionist",
+                                "password", "wrongpassword"
+                        ))))
+                .andExpect(status().isUnauthorized())
+                .andExpect(jsonPath("$.message", is("Invalid username or password")));
+    }
+
+    @Test
+    void loginFailsWithBlankUsername() throws Exception {
+        mockMvc.perform(post("/api/auth/login")
+                        .contentType(MediaType.APPLICATION_JSON)
+                        .content(json(Map.of(
+                                "username", "",
+                                "password", "dental123"
+                        ))))
+                .andExpect(status().isUnauthorized())
+                .andExpect(jsonPath("$.message", is("Invalid username or password")));
+    }
 }
